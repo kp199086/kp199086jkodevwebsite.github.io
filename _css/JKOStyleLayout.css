@@ -1,0 +1,104 @@
+﻿/*--- Design Layout and Grid Area ---*/
+.header {
+    grid-area: JKOGridHeader;
+    align-self: center;
+    background-color: #FFF;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.navigation {
+    grid-area: JKOGridNav;
+    align-self: center;
+    background-color: #0181CB;
+    padding: 15px;
+    display: inline-block;
+    justify-self: end;
+    width: 100%;
+}
+
+.content-area {
+    grid-area: JKOGridContent;
+    width: 69%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #FFFFFF;
+    padding: 15px;
+}
+
+.sidebar {
+    grid-area: JKOGridSidebar;
+    padding: 1rem;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #FFFFFF;
+    padding: 15px;
+}
+
+.footer {
+    grid-area: JKOGridFooter;
+    color: #FFFFFF;
+    background-color: #0181CB;
+    border: 1px solid #0181CB;
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+}
+
+.header, .navigation, .content-area, .sidebar, .footer {
+    margin-top: 1rem;
+}
+
+/*--- Grid parent ---*/
+.container {
+    display: grid;
+    margin: 2rem 2rem;
+    border: 1px solid #0181CB;
+    grid-gap: 2rem 1rem;
+    grid-template-columns: 2fr 6fr 4fr;
+    grid-template-rows: 4rem auto;
+    grid-template-areas: "JKOGridHeader JKOGridHeader JKOGridHeader" "JKOGridNav JKOGridNav JKOGridNav" "JKOGridContent JKOGridContent JKOGridSidebar" "JKOGridFooter JKOGridFooter JKOGridFooter";
+    background-color: #FFFFFF;
+}
+
+/*--- Responsive Screen of mobile, tablet and desktop ---*/
+@supports (display: grid) {
+    .content-area, .sidebar {
+        width: auto;
+    }
+
+    .navigation, .content-area, .sidebar, .sponsors-wrapper, .footer, .sponsor {
+        margin-top: 0;
+    }
+}
+
+/*--- For minimum of desktop ---*/
+@media all and (max-width: 992px) {
+    .container {
+        margin: 0 1rem;
+    }
+}
+
+/*--- For minimum of Tablet ---*/
+@media all and (max-width: 768px) {
+    .content-area, .sidebar {
+        display: block;
+        width: 100%;
+    }
+
+    .container {
+        grid-gap: 2rem 0;
+        grid-template-areas: "JKOGridHeader JKOGridNav JKOGridNav" "JKOGridContent JKOGridContent JKOGridContent" "JKOGridSidebar JKOGridSidebar JKOGridSidebar" "JKOGridFooter JKOGridFooter JKOGridFooter";
+    }
+}
+
+/*--- For minimum of Mobile ---*/
+@media all and (max-width: 576px) {
+    .container {
+        margin: 0; 
+        grid-gap: 2rem 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "JKOGridHeader" "JKOGridNav" "JKOGridContent" "JKOGridSidebar" "JKOGridFooter";
+    }
+}

@@ -1,0 +1,154 @@
+﻿/* Common styles Global */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+body {
+    background: #C0C0C0;
+}
+
+/*--- Global of headline and Paragrahy ---*/
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 5px;
+    color: #0F0E0E;
+}
+
+p, li {
+    line-height: 150%;
+    padding: 0 5px 0 5px;
+    font-size: 120%;
+    color: #0F0E0E
+}
+
+/*--- Warning and successful information display by validation ---*/
+.Warning {
+    width: 100%;
+    background-color: Red;
+    display: inline-block;
+    font-weight: bolder;
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+.Successful {
+    width: 100%;
+    background-color: #00A058;
+    font-weight: bolder;
+    color: #0F0E0E;
+    padding: 10px;
+}
+
+/*--- Footer style information display ---*/
+.footer a
+{
+    color: #FFFFFF;
+}
+
+hr.FooterHR {
+    width: 100%;
+    height: 2.5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    border: 0 none;
+}
+
+.copyrightStyle {
+    margin: 5px;
+    color: #FFF;
+    font-size: 90%;
+    font-weight: bolder;
+    text-align: right;
+    line-height: normal;
+    padding: 0;
+}
+
+.CommonStyle {
+    margin: 5px 5px 15px 5px;
+    color: #FFD800;
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: left;
+    line-height: normal;
+}
+
+/*--- Button Style ---*/
+.buttonStyle {
+    padding: 10px 20px 10px 20px;
+    background-color: #0181CB;
+    border: solid 1.5px #0181CB;
+    color: #FFD800;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttonStyle:hover {
+    padding: 10px 20px 10px 20px;
+    background-color: #C0C0C0;
+    border: solid 1.5px #C0C0C0;
+    color: #0F0E0E;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*--- Table Style ---*/
+table.JKOTableStyle {
+    border: 1px solid #0181CB;
+    background-color: #C0C0C0;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table.JKOTableStyle td, table.JKOTableStyle th {
+    border: 1px solid #0181CB;
+    padding: 3px 3px;
+}
+
+table.JKOTableStyle tbody td {
+    font-size: 13px;
+}
+
+table.JKOTableStyle tr:nth-child(even) {
+    background: #FFFFFF;
+}
+
+table.JKOTableStyle thead {
+    background: #0181CB;
+    border-bottom: 3px solid #0F0E0E;
+}
+
+table.JKOTableStyle thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+
+table.JKOTableStyle thead th:first-child {
+    border-left: none;
+}
+
+/*--- Responsive Screen of mobile, tablet and desktop ---*/
+@media all and (max-width: 768px) {
+    .copyrightStyle, .CommonStyle {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 576px) {
+    body {
+        background: #FFFFFF;
+        display: inline-block; 
+    }
+}

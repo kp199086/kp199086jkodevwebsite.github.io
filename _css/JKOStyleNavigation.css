@@ -1,0 +1,38 @@
+﻿#navigation a, .navigation a {
+    background-color: #C0C0C0;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    width: auto;
+    height: auto;
+    margin: 2px; 
+    padding: 10px;
+    float: left;
+    font-weight: bold;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    behavior: url(border-radius.htc);
+}
+
+#navigation a:hover, .navigation a:hover 
+{
+    background-color: /*#a00054*/ #0165BA;
+    -moz-transition: ease-in-out all .6s;
+    -webkit-transition: ease-in-out all .6s;
+    text-decoration: none;
+}
+
+/*--- Responsive Screen of mobile, tablet and desktop ---*/
+@media all and (max-width: 576px) {
+    .navigation a {
+        display: block;
+        width: 100%;
+    }
+}
